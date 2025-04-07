@@ -5,7 +5,6 @@ function getHumanChoice() {
   // return the variable
   return humanChoice;
 }
-console.log(getHumanChoice());
 
 // get computer choice
 function getComputerChoice() {
@@ -22,7 +21,31 @@ function getComputerChoice() {
   //return the variable
   return computerChoice;
 }
-console.log(getComputerChoice());
+
+//store the scores
+let humanScore = 0;
+let computerScore = 0;
 
 //play one round
+function playRound(humanChoice, computerChoice) {
+  //make choices case-insensitive
+  humanChoice = humanChoice.toUpperCase();
+  computerChoice = computerChoice.toUpperCase();
+  //compare choices
+  if (humanChoice === computerChoice) {
+    console.log("It's a tie!");
+  } else if (humanChoice == "rock" && computerChoice == "scissors") {
+    humanScore++;
+  } else if (humanChoice == "scissors" && computerChoice == "paper") {
+    console.log(`${humanChoice} beats ${computerChoice}!`);
+    humanScore++;
+  } else if (humanChoice == "paper" && computerChoice == "rock") {
+    console.log(`${humanChoice} beats ${computerChoice}!`);
+    humanScore++;
+  } else {
+    console.log(`${computerChoice} beats ${humanChoice}!`);
+    computerScore++;
+  }
+}
+
 // 5 rounds make a game
