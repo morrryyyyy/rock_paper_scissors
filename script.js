@@ -1,10 +1,16 @@
-//get human choice
-function getHumanChoice() {
-  //ask the user to input a choice and store the choice in a variable
-  let humanChoice = prompt("Enter a choice between rock, paper and scissors: ");
-  // return the variable
-  return humanChoice;
-}
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+rockButton.addEventListener("click", () => {
+  playRound("rock", getComputerChoice());
+});
+paperButton.addEventListener("click", () => {
+  playRound("paper", getComputerChoice());
+});
+scissorsButton.addEventListener("click", () => {
+  playRound("scissors", getComputerChoice());
+});
 
 // get computer choice
 function getComputerChoice() {
