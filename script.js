@@ -42,7 +42,7 @@ function playRound(humanChoice, computerChoice) {
   computerChoice = computerChoice.toLowerCase();
   //compare choices
   if (humanChoice === computerChoice) {
-    roundResult.textContent = "It's a tie!";
+    roundResult.textContent = `${humanChoice} ties with ${computerChoice}`;
   } else if (
     (humanChoice == "rock" && computerChoice == "scissors") ||
     (humanChoice == "scissors" && computerChoice == "paper") ||
